@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Fútbol y Esperanza 2026</title>
+  <meta name="description" content="Registro evangelístico para conectar personas con oración, seguimiento espiritual e iglesias cristianas en California." />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div class="badge">California • 2026</div>
+
+      <div class="ball-icon" aria-hidden="true">⚽</div>
+
+      <h1>Fútbol y Esperanza</h1>
+
+      <p class="subtitle">
+        Queremos orar por ti y ayudarte a conectar con una iglesia cristiana cerca de tu ciudad.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Registro rápido</h2>
+      <p class="small-text">
+        Tus datos serán usados solamente para seguimiento espiritual y contacto pastoral.
+      </p>
+
+      <form name="registro-evangelismo"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/gracias.html">
+
+        <input type="hidden" name="form-name" value="registro-evangelismo" />
+
+        <p class="hidden">
+          <label>No llenar: <input name="bot-field" /></label>
+        </p>
+
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" name="telefono" type="tel" placeholder="Ej. 562-000-0000" required />
+
+        <label for="email">Correo electrónico, opcional</label>
+        <input id="email" name="email" type="email" placeholder="correo@ejemplo.com" />
+
+        <label for="ciudad">Ciudad donde vives</label>
+        <input id="ciudad" name="ciudad" type="text" placeholder="Ej. Riverside, Fresno, San José" required />
+
+        <label for="zona">Zona de California</label>
+        <select id="zona" name="zona_california" required>
+          <option value="">Selecciona una zona</option>
+          <option value="Norte de California">Norte de California</option>
+          <option value="Centro de California">Centro de California</option>
+          <option value="Sur de California">Sur de California</option>
+          <option value="No estoy seguro">No estoy seguro</option>
+        </select>
+
+        <label for="oracion">¿Deseas recibir oración?</label>
+        <select id="oracion" name="desea_oracion" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+
+        <label for="cristo">¿Deseas conocer más de Cristo?</label>
+        <select id="cristo" name="desea_conocer_cristo" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+
+        <label for="iglesia">¿Quieres que te conectemos con una iglesia cercana?</label>
+        <select id="iglesia" name="desea_conexion_iglesia" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+
+        <label for="peticion">Petición de oración, opcional</label>
+        <textarea id="peticion" name="peticion_oracion" rows="4" placeholder="Puedes escribir brevemente tu petición"></textarea>
+
+        <label class="checkbox">
+          <input type="checkbox" name="consentimiento_contacto" value="Sí" required />
+          Acepto ser contactado para oración y seguimiento espiritual.
+        </label>
+
+        <button type="submit">Enviar registro</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>Una iniciativa cristiana de oración, evangelismo y seguimiento pastoral.</p>
+    </footer>
+  </main>
+</body>
+</html>
